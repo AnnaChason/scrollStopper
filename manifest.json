@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Doomscroll Stopper",
+  "version": "1.0",
+  "description": "Warns you when you've been scrolling for too long.",
+  "permissions": ["storage", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_page": "options.html"
+}
